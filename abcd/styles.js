@@ -64,6 +64,11 @@ export default  styles = StyleSheet.create({
     opcode: {
         justifyContent: "center",
         alignItems: "center",
+    },
+    textStyling: {
+        color: "#2D7FFF",
+        textAlign: "center",
+        fontSize: 30
     }
   
   });
