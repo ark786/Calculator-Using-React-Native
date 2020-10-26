@@ -89,6 +89,20 @@ export default class App extends Component {
         })
     }  }
 
+    shorty =()=>{
+        let rows = []
+        let numsrow = [[1, 2, 3], [4, 5, 6], [7, 8, 9], ['.', 0, '=']]
+        for (let i = 0; i < 4; i++) {
+          let row = []
+          for (let j = 0; j < 3; j++) {
+            row.push(<TouchableOpacity key={numsrow[i][j]} style={styles.btn} onPress={() => this.buttonPressed(numsrow[i][j])}>
+              <Text style={styles.btntext}>{numsrow[i][j]}</Text>
+            </TouchableOpacity>)
+          }
+          rows.push(<View style={styles.row}>{row}</View>)
+        }
+    return numsrow
+    }
 
 
   render() {
